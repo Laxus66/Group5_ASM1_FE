@@ -168,12 +168,6 @@ const Admin = () => {
         },
         {
             id: 4,
-            name: 'User',
-            icon: <TeamOutlined />,
-            path: '/admin/users',
-        },
-        {
-            id: 5,
             name: 'Category',
             icon: <UnorderedListOutlined />,
             path: '/admin/category',

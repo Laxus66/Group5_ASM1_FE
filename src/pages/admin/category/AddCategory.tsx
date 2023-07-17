@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 // import { useForm, SubmitHandler } from 'react-hook-form'
 import { Button, Checkbox, Form, Input, notification } from 'antd';
-import { ICategories } from '../types/categories';
+import { ICategories } from '../../types/categories';
 interface IProps {
     categories: ICategories[],
     onAddCategory: (product: ICategories) => void

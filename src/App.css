@@ -61,3 +61,11 @@
   font-size: 24px;
   margin-bottom: 10px;
 }
+
+.category-buttons {
+  margin-bottom: 16px;
+}
+
+.category-buttons button {
+  margin-right: 8px;
+}

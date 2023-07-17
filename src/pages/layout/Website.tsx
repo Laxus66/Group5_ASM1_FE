@@ -10,7 +10,6 @@ const Website = () => {
             <HeaderHome />
             <Outlet />
             <FooterComponent />
-
         </div>
 
     )

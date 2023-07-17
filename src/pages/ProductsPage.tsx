@@ -16,6 +16,11 @@ const ProductsPage = (props: Iprops) => {
     useEffect(() => {
         setData(props.products)
     }, [props])
+    const [selectedCategory, setSelectedCategory] = useState<string>('');
+
+    const handleCategoryChange = (category: string) => {
+        setSelectedCategory(category);
+    };
 
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [productsPerPage, setProductsPerPage] = useState<number>(8);
@@ -87,6 +92,17 @@ const ProductsPage = (props: Iprops) => {
                     },
                 ]}
             />
+            <div className="category-buttons">
+                {props.categories.map((category) => (
+                    <Button
+                        key={category}
+                        onClick={() => handleCategoryChange(category)}
+                        type={selectedCategory === category ? 'primary' : 'default'}
+                    >
+                        {category}
+                    </Button>
+                ))}
+            </div>
 
             <div className='products_main'>
                 <div className="search-container">

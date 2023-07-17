@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Iproducts } from '../types/products';
+import { Iproducts } from '../../types/products';
 import { Link } from 'react-router-dom';
 import { Table, Button, Breadcrumb, Input } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { CloseOutlined, EditOutlined } from '@ant-design/icons';
-import { IUser } from '../types/users';
+import { IUser } from '../../types/users';
 
 interface DataType {
     key: React.Key;

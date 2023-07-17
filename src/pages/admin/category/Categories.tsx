@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 import { Table, Button, Breadcrumb, Input, Popconfirm, notification } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { CloseOutlined, EditOutlined } from '@ant-design/icons';
+import { ICategories } from '../../types/categories';
 // import { IUser } from '../types/users';
-import { ICategories } from '../types/categories';
 
 interface DataType {
     key: React.Key;
     name: string;
 }
 
-interface ICategory {
-    categories: ICategories[];
+interface IProps {
+    category: ICategories[];
     onRemoveCategory: (id: number) => void;
 }
 
-const Categories = (props: ICategory) => {
+const Categories = (props: IProps) => {
     const [filteredData, setFilteredData] = useState<DataType[]>([]);
     const [searchText, setSearchText] = useState<string>('');
 
     useEffect(() => {
-        const data = props.categories.map((item) => {
+        const data = props.category.map((item) => {
             return {
                 key: item.id,
                 name: item.name
@@ -30,7 +30,7 @@ const Categories = (props: ICategory) => {
         });
         console.log(data);
         setFilteredData(data);
-    }, [props.categories]);
+    }, [props.category]);
 
     const removeCategories = (id: number) => {
         props.onRemoveCategory(id);
@@ -39,7 +39,7 @@ const Categories = (props: ICategory) => {
     const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value.toLowerCase();
 
-        const filtered = props.categories.map((item) => {
+        const filtered = props.category.map((item) => {
             return {
                 key: item.id,
                 name: item.name
@@ -51,7 +51,7 @@ const Categories = (props: ICategory) => {
         });
 
         setSearchText(value);
-        setFilteredData(value ? filtered : props.categories.map((item) => {
+        setFilteredData(value ? filtered : props.category.map((item) => {
             return {
                 key: item.id,
                 name: item.name
@@ -97,16 +97,6 @@ const Categories = (props: ICategory) => {
 
     return (
         <div>
-            <Breadcrumb
-                items={[
-                    {
-                        title: <a><Link to={'/admin'}>Home</Link></a>,
-                    },
-                    {
-                        title: <a><Link to={'/admin/categories'}>Categories</Link></a>,
-                    },
-                ]}
-            />
             <Button type="primary" style={{ backgroundColor: 'green', margin: '10px' }}><Link to={'/admin/category/add'}><EditOutlined />Add Category</Link></Button>
 
             <Input.Search

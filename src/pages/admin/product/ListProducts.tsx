@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Iproducts } from '../types/products'
+import { Iproducts } from '../../types/products'
 import { Link } from 'react-router-dom'
 import { Table, Button, Breadcrumb, Popconfirm, notification } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { CloseOutlined, EditOutlined } from '@ant-design/icons';
 import Search from 'antd/es/transfer/search';
+import { ICategories } from '../../types/categories';
 interface DataType {
     key: React.Key;
     name: string;
@@ -47,6 +48,8 @@ const ListProducts = (props: Iprops) => {
             key: 'image',
             render: (image: string) => <img src={image} alt="Product image" width={100} />
         },
+        { title: 'Category', dataIndex: 'categoryId', key: 'categoryId' },
+
         {
             title: 'Action',
             dataIndex: '',

@@ -5,14 +5,16 @@
       "name": "IPhone 14 Pro Max 128GB I Chính Hãng",
       "price": "27150000",
       "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_18.png",
-      "description": " Màn hình Dynamic Island - Sự biến mất của màn hình tai thỏ thay thế bằng thiết kế viên thuốc, OLED 6,7 inch, hỗ trợ always-on display"
+      "description": " Màn hình Dynamic Island - Sự biến mất của màn hình tai thỏ thay thế bằng thiết kế viên thuốc, OLED 6,7 inch, hỗ trợ always-on display",
+      "categoryId": 5
     },
     {
       "id": 2,
       "name": "Xiaomi 11T",
       "price": "10990000",
       "description": "Li-Po 5000 mAh Sạc nhanh 67W, đầy pin trong 36ph (quảng cáo)",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/x/i/xiaomi-mi-11t-1_1.jpg"
+      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/x/i/xiaomi-mi-11t-1_1.jpg",
+      "categoryId": 1
     },
     {
       "id": 3,
@@ -97,12 +99,20 @@
       "price": "13990000",
       "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/r/e/realme-gt-neo2-6k1-099.jpg",
       "description": "Màn hình AMOLED 6.62 inch - Camera chính 64 MP - Chip Snapdragon 870 5G"
+    },
+    {
+      "name": "test add",
+      "price": "999",
+      "image": "http://localhost:5173/admin/products/add",
+      "description": "demo add",
+      "categoryId": "test 01",
+      "id": 15
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "Xiaomi"
+      "name": "Xiaomi "
     },
     {
       "id": 2,
@@ -111,6 +121,14 @@
     {
       "id": 3,
       "name": "Fast Charging"
+    },
+    {
+      "name": "test 01",
+      "id": 4
+    },
+    {
+      "name": "Iphone",
+      "id": 5
     }
   ],
   "users": [
@@ -120,7 +138,17 @@
       "rePassword": "123",
       "email": "laxus2301@gmail.com",
       "tel": "0862325011",
-      "id": 1
+      "id": 1,
+      "role": 0
+    },
+    {
+      "name": "user01",
+      "password": "Vinh0987@",
+      "rePassword": "Vinh0987@",
+      "email": "user01@gmail.com",
+      "tel": "0862325011",
+      "id": 2,
+      "role": 1
     }
   ]
 }
